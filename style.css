@@ -21,6 +21,8 @@ html {
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  
+  
 }
 header {
   position: fixed;
@@ -693,28 +695,103 @@ span {
   color: #fff; /* White text to stand out on the dark background */
 }
 
-.portfolio-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  padding: 0 15px;
+
+/*cards*/
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
+  background: linear-gradient(#ECEFFE,#121212);
 }
 
-.portfolio-item {
+.card-wrapper{
+  max-width: 1100px;
+  margin: 0 60px 35px;
+  padding: 20px 10px;
   overflow: hidden;
-  border-radius: 8px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
-.portfolio-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+.card-list .card-item{
+  list-style: none;
+}
+.card-list .card-item .card-link{
+  user-select: none;
   display: block;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
 }
 
-.portfolio-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+
+.card-list .card-item .card-link:hover{
+  border-color: #e558af;
+}
+
+.card-list .card-link .card-image{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-list .card-link .badge{
+color: rgb(249, 245, 249);
+padding: 8px 16px;
+font-size: 0.99rem;
+font-weight: 500;
+margin: 16px 0 18px;
+background: #676165;
+width: fit-content;
+border-radius: 50px;
+}
+
+.card-list .card-link .card-title{
+  font-size: 1.19rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.card-list .card-link .card-button{
+  height: 35px;
+  width: 35px;
+  color: #e558af;
+  border-radius: 50%;
+  margin: 30px 05px;
+  background: none;
+  cursor: pointer;
+  border: 2px solid #e558af;
+  transform: rotate(-45deg);
+  transition: 0.4s ease;
+}
+
+.card-list .card-link:hover .card-button{
+   color: #fff;
+   background: #e558af;
+}
+
+.card-wrapper .swiper-pagination-bullet{
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+  background: #e558af;
+}
+
+.card-wrapper .swiper-pagination-bullet-active{
+  opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button{
+color: #e558af;
+margin-top: -35px;
+}
+
+.portfolio-container{
+  padding-top: 100px;
+  padding-left: 55px;
+
 }
